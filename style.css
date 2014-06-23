@@ -266,7 +266,7 @@ a.button:hover, a.comment-reply-link:hover, #commentform #submit:hover, .submit:
 
 .Flexible-container {
     position: relative;
-    padding-bottom: 56.25%;
+    padding-bottom: 59.25%;
     padding-top: 30px;
     height: 0;
     overflow: hidden;
@@ -573,6 +573,12 @@ background-image:url('i/tris-left.jpg');
 .mc-contact-italic {
     font-family: "OPENSANS-ITALIC","Open Sans",sans-serif;
     font-size: 14px;
+}
+.mc-bold-italic {
+    font-family: "Open Sans",sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 16px;
 }
 .mc-lite {
     font-family: "Open Sans Light", "Open Sans",sans-serif;
@@ -1195,6 +1201,60 @@ div.quantity .plus:hover, div.quantity .minus:hover {
 
 /* End Josh Klar additions */
 
+
+/* Service */
+.mc-service-wrap {
+    clear: both;
+    max-width: 905px;
+    min-height: 335px;
+    margin: 0 auto;
+    padding: 10px 25px 45px 25px;
+}
+article.page h1 {
+    font-family: "Open Sans Light","Open Sans",sans-serif;
+    font-size: 35px;
+    padding-left: 15px;
+}
+.mc-service-circuit h2 {
+    font-family: "Open Sans Light","Open Sans",sans-serif;
+    font-size: 24px;
+}
+.mc-service-circuit p {
+    width: 90%;
+    margin-bottom: 10px;
+}
+.mc-service-tout p {
+    width: 90%;
+}
+.mc-service-pearl {
+    margin: 0;
+}
+.mc-service-pearl img {
+    float: left;
+    width: 29%;
+}
+.mc-service-pearl-text {
+    float: left;
+    width: 67%;
+    padding-left: 3%;
+}
+.mc-service-pearl-text h2 {
+    font-family: "Open Sans",sans-serif;
+    font-size: 18px;
+    margin-bottom: 1px;
+}
+.mc-service-pearl-text a {
+    color: #395083;
+    text-decoration: underline;
+}
+.mc-service-lite-italic {
+    font-family: "Open Sans Light  italic","Open Sans",sans-serif;
+    font-size: 12px;
+    font-style: italic;
+}
+.mc-service-pix img {
+    margin-top: 53px;
+}
 /* Contact */
 .mc-page {
     float: left;
