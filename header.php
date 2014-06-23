@@ -63,7 +63,7 @@ global $woo_options, $woocommerce;
     <?php woo_header_before(); ?>
     <div class="full-stripe">
     </div>
-	<header id="header" class="col-full">
+	<header id="header" class="mc-header-full col-full">
         <div class="mc-header-wrap">
 
 <div id="mobile-clear"></div>

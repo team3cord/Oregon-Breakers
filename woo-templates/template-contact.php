@@ -118,7 +118,7 @@ jQuery(document).ready(function() {
 //-->!]]>
 </script>
 
-    <div id="content" class="col-full">
+    <div id="mc-content" class="col-full">
     	
     	<?php woo_main_before(); ?>
     
