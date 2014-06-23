@@ -62,9 +62,10 @@ global $woo_options, $woocommerce;
 
     <?php woo_header_before(); ?>
     <div class="full-stripe">
+    </div>
 	<header id="header" class="col-full">
+        <div class="mc-header-wrap">
 
-<div id="responsive-logo"><img src="http://raredimension.com/clients/oregonbreakers/i/obi-logo.png"/></div>
 <div id="mobile-clear"></div>
 
 	    <hgroup>
@@ -106,8 +107,8 @@ global $woo_options, $woocommerce;
 
 		<?php woo_nav_after(); ?>
 
-	</header><!-- /#header -->
+       </div>
+    </header><!-- /#header -->
 
-</div>
 
 <?php woo_content_before(); ?>

@@ -20,15 +20,15 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 
     <?php if ( $woo_options[ 'woo_homepage_banner' ] == "true" ) { ?>
     	
-    	<a href="/meet-the-experts"><div class="homepage-banner">
+    	<a href="/meet-the-experts"><div class="mc-homepage-banner">
         
     		<?php
 				if ( $woo_options[ 'woo_homepage_banner' ] == "true" ) { $banner = $woo_options['woo_homepage_banner_path']; }
 				if ( $woo_options[ 'woo_homepage_banner' ] == "true" && is_ssl() ) { $banner = preg_replace("/^http:/", "https:", $woo_options['woo_homepage_banner_path']); }
 			?>
 			<img src="<?php echo $banner; ?>" alt="" />
-    		<h1><span><?php echo $woo_options['woo_homepage_banner_headline']; ?></span></h1>
-    		<div class="description"><?php echo wpautop($woo_options['woo_homepage_banner_standfirst']); ?></div>
+    		<!--<h1><span><?//php echo $woo_options['woo_homepage_banner_headline']; ?></span></h1>
+    		<div class="description"><?//php echo wpautop($woo_options['woo_homepage_banner_standfirst']); ?></div> -->
             
             <!-- <div id="obi-slider-info">
             <div class="obi-slider-text">
@@ -58,11 +58,15 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
   }
 </script>
 <form role="search" method="get" id="searchform_special" action="<?php echo esc_url( home_url( '/'  ) ); ?>">
-  <div>
-    <label class="screen-reader-text" for="s"><?php _e( 'Search for:', 'woocommerce' ); ?></label>
-    <input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" placeholder="<?php _e( 'Search for products', 'woocommerce' ); ?>" />
-    <select onchange="avalcm_search_link(this.value)" >
-       <option value=''>All Manufacturers</option>
+  <div class="obi-search-wrap">
+      <div class="mc-search-for">
+        <label class="screen-reader-text" for="s"><?php _e( 'Search for:', 'woocommerce' ); ?></label>
+        <input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" placeholder="<?php _e( 'Search for products', 'woocommerce' ); ?>" onfocus="this.placeholder ='' " />
+      </div>
+      <div class="mc-or"><span>- OR -</span></div>
+      <div class="overpower-selectbox">
+        <select onchange="avalcm_search_link(this.value)" >
+           <option value=''>Manufacturers</option>
    <?php
     //$sql="SELECT taxonomy,slug, <code>name</code> from wp_term_taxonomy , wp_terms where wp_term_taxonomy.term_id=wp_terms.term_id and taxonomy in ('product_cat','') ORDER BY taxonomy ASC , term_taxonomy_id asc;";
     $sql="SELECT DISTINCT meta_value from $wpdb->postmeta where meta_key = 'manufacturer'";
@@ -71,43 +75,49 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
       echo '<option value="'. $singlefilter->meta_value.'">' . $singlefilter->meta_value. '</option>';
     }
    ?>
-   </select>
-   <input type="submit" id="searchsubmit" value="<?php echo esc_attr__( 'Go' ); ?>" />
-   <input type="hidden" name="post_type" value="product" />
-   <input type="hidden" id="home_url" value="<?php echo esc_url( home_url( '/'  ) ); ?>" />
-   <input type="hidden" id="categ_base_lang" value="<?php echo _x('product-category', 'slug', 'woocommerce') ?>" />
+       </select>
+      </div>
+      <div class="mc-go">
+           <input type="submit" id="searchsubmit" value="<?php echo esc_attr__( 'Go' ); ?>" />
+           <input type="hidden" name="post_type" value="product" />
+           <input type="hidden" id="home_url" value="<?php echo esc_url( home_url( '/'  ) ); ?>" />
+           <input type="hidden" id="categ_base_lang" value="<?php echo _x('product-category', 'slug', 'woocommerce') ?>" />
+      </div>
   </div>
 </form>
 </div>
 <!--SEARCH BAR END-->
 
-<div id="obi-homecats-box">
-<div class="obi-homecat teal1 desktop">Commercial/Industrial</div>
-<div class="obi-homecat teal2 desktop">Residential</div>
+<div id="mc-obi-homecats-box">
+    <div class="products-left">
+        <div class="obi-homecat teal1 desktop">
+            <div class="mc-obi-homecat-wrap-left">
+               <h3 class="mc-comercial">Commercial/Industrial</h3>
+            </div>
+        </div>
+        <div class="mc-comm-products mc-products">
+            <!--COMMERCIAL-->
+                <?php echo do_shortcode("[product_categories number='12' parent='15']"); ?>
+            <!--COMMERCIAL END-->
+
+        </div>
+        </div>
+    <div class="products-right">
+        <div class="obi-homecat teal2 desktop">
+            <div class="mc-obi-homecat-wrap-right">
+                <h3 class="mc-comercial">Residential</h3>
+            </div>
+        </div>
+        <div class="mc-res-products mc-products">
+
+                <!--RESIDENTIAL-->
+                    <?php echo do_shortcode("[product_categories number='12' parent='14']"); ?>
+                <!--RESIDENTIAL END-->
+        </div>
+    </div>
 </div>
     
-    <div id="content" class="col-full <?php if ( $woo_options[ 'woo_homepage_banner' ] == "true" ) echo 'with-banner'; ?> <?php if ( $woo_options[ 'woo_homepage_sidebar' ] == "false" ) echo 'no-sidebar'; ?>">
-    
-    	<?php woo_main_before(); ?>  
-                
-    
-<section id="main" class="col-left">
 
-<div class="obi-home-products">  
-<div class="obi-homecat teal1 mobile">Commercial/Industrial</div>  
-<!--RESIDENTIAL-->        
-<?php echo do_shortcode("[product_categories number='12' parent='15']"); ?>
-<!--RESIDENTIAL END-->
-</div>
-
-<div id="mobile-clear"></div>
-
-<div class="obi-home-products">
-<div class="obi-homecat teal2 mobile">Residential</div>
-<!--COMMERCIAL-->        
-<?php echo do_shortcode("[product_categories number='12' parent='14']"); ?>
-<!--COMMERCIAL END-->
-</div>
 		
 		<?php mystile_homepage_content(); ?>		
 		
@@ -170,8 +180,8 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
     <img src="http://raredimension.com/clients/oregonbreakers/i/pearl-logo.png"/>
     <div class="obi-home-pearl-text">
     <h2>Recognized by Pearl</h2>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>
-    Maecenas ut hendrerit est. Maecenas ut hendrerit est.<br/>
+    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+    <span>Maecenas ut hendrerit est. Maecenas ut hendrerit est.</span><br>
 	<a href="http://pearl1.org">Pearl1.org</a>
     </div>
     <div class="clr"></div>
