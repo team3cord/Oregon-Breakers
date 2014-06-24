@@ -22,7 +22,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
     <div id="content" class="page col-full">
     	<?php woo_main_before(); ?>
     	
-		<section id="mcmain" class="col-left">
+		<section id="main" class="col-left">
 
         <?php
         	if ( have_posts() ) { $count = 0;

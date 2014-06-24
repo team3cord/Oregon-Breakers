@@ -25,53 +25,58 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	 	return;
 	 }
 ?>
+    <div class="mc-single-wrap single-top">
+        <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-<div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
+    	<?php
+    		/**
+    		 * woocommerce_before_single_product_summary hook
+    		 *
+    		 * @hooked woocommerce_show_product_sale_flash - 10
+    		 * @hooked woocommerce_show_product_images - 20
+    		 */
+    		do_action( 'woocommerce_before_single_product_summary' );
+    	?>
 
-	<?php
-		/**
-		 * woocommerce_before_single_product_summary hook
-		 *
-		 * @hooked woocommerce_show_product_sale_flash - 10
-		 * @hooked woocommerce_show_product_images - 20
-		 */
-		do_action( 'woocommerce_before_single_product_summary' );
-	?>
+    	<div class="summary entry-summary mc-get-form">
+            <div class="ob-summary-left mc-summary">
+    		<?php
+    			/**
+    			 * woocommerce_single_product_summary hook
+    			 *
+    			 * @hooked woocommerce_template_single_title - 5
+    			 * @hooked woocommerce_template_single_rating - 10
+    			 * @hooked woocommerce_template_single_price - 10
+    			 * @hooked woocommerce_template_single_excerpt - 20
+    			 * @hooked woocommerce_template_single_add_to_cart - 30
+    			 * @hooked woocommerce_template_single_meta - 40
+    			 * @hooked woocommerce_template_single_sharing - 50
+    			 */
+    			do_action( 'woocommerce_single_product_summary' );
+    		?>
 
-	<div class="summary entry-summary">
-        <div class="ob-summary-left">
-		<?php
-			/**
-			 * woocommerce_single_product_summary hook
-			 *
-			 * @hooked woocommerce_template_single_title - 5
-			 * @hooked woocommerce_template_single_rating - 10
-			 * @hooked woocommerce_template_single_price - 10
-			 * @hooked woocommerce_template_single_excerpt - 20
-			 * @hooked woocommerce_template_single_add_to_cart - 30
-			 * @hooked woocommerce_template_single_meta - 40
-			 * @hooked woocommerce_template_single_sharing - 50
-			 */
-			do_action( 'woocommerce_single_product_summary' );
-		?>
+    	</div><!-- .summary -->
+        </div> <!-- mc-single wrap -->
 
-	</div><!-- .summary -->
-    
-    <div class="obi-price-box">
-    </div>
 
-	<?php
-		/**
-		 * woocommerce_after_single_product_summary hook
-		 *
-		 * @hooked woocommerce_output_product_data_tabs - 10
-		 * @hooked woocommerce_output_related_products - 20
-		 */
-		do_action( 'woocommerce_after_single_product_summary' );
-	?>
+        </div><!-- #product-<?php the_ID(); ?> -->
 
-	<meta itemprop="url" content="<?php the_permalink(); ?>" />
+        <div class="mc-tab-line">
+        </div>
+        <div class="mc-tab-wrap">
 
-</div><!-- #product-<?php the_ID(); ?> -->
+            <?php
+                /**
+                 * woocommerce_after_single_product_summary hook
+                 *
+                 * @hooked woocommerce_output_product_data_tabs - 10
+                 * @hooked woocommerce_output_related_products - 20
+                 */
+                do_action( 'woocommerce_after_single_product_summary' );
+            ?>
 
-<?php do_action( 'woocommerce_after_single_product' ); ?>
+            <meta itemprop="url" content="<?php the_permalink(); ?>" />
+
+        </div>
+
+    <?php do_action( 'woocommerce_after_single_product' ); ?>

@@ -42,7 +42,7 @@ global $woo_options, $woocommerce;
     
     <div id="top-help">
 		<em>Need some help?</em> Call us: <span class="fbold">(503) 736-0921</span>
-        <span class="fsmall"><br/>Toll free: (800) 943-3323</span>
+        <span class="fsmall"><br/>Toll free: (800) 943-3323&nbsp</span>
     </div>
         
     <div id="top-shop">
