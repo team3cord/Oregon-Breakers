@@ -24,8 +24,18 @@ get_header( 'shop' ); ?>
 	?>
 
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+        <div class="mc-search-discription">
+            <h1>CIRCUIT BREAKERS (Residential)</h1>
+            <p class="mc-lite">Intro information about residential circuit breakers. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique pulvinar nibh sit amet feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique pulvinar nibh sit amet feugiat. </p>
+        </div>
 
-			<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
+            <div class="mc-contact-full-stripe">
+                <div class="callout-bar product-bar">
+                    <span class="products-large"><a href="#">All Products</a> </span><span> > Circuit Breakers (residential)</span>
+                </div>
+            </div>
+            <div class="mc-products-wrap">
+			<!-- <h1 class="mc-page-title"><?//php woocommerce_page_title(); ?></h1> -->
 
 		<?php endif; ?>
 
@@ -88,4 +98,5 @@ get_header( 'shop' ); ?>
 		do_action( 'woocommerce_sidebar' );
 	?>
 
+        </div> <!-- mc products wrap -->
 <?php get_footer( 'shop' ); ?>

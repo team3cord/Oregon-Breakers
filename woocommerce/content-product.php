@@ -38,8 +38,9 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 <li <?php post_class( $classes ); ?>>
 
 	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
-
-		<h3><?php the_title(); ?></h3>
+        <div class="title-space">
+            <h3><?php the_title(); ?></h3>
+        </div>
 
 		<?php
 			/**
@@ -51,7 +52,7 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 			do_action( 'woocommerce_before_shop_loop_item_title' );
 		?>
 
-
+    <div class="mc-discription">
 		<?php
 			/**
 			 * woocommerce_after_shop_loop_item_title hook
@@ -61,9 +62,11 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 			 */
 			do_action( 'woocommerce_after_shop_loop_item_title' );
 		?>
+    </div>
+    <div class="mc-single-btn">
+        <a class="single_add_to_cart_button  alt details_button" href="<?php the_permalink(); ?>">Details</a>
+    </div>
 
-    <a class="single_add_to_cart_button button alt details_button" href="<?php the_permalink(); ?>">Details</a>
-
-	<?php do_action( 'woocommerce_after_shop_loop_item' ); ?>
+    <?php do_action( 'woocommerce_after_shop_loop_item' ); ?>
 
 </li>

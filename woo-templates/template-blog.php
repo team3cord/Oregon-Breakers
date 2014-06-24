@@ -36,7 +36,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
     
         <?php woo_main_before(); ?>
         
-        <section id="main" class="col-left">       
+        <section id="main" class="col-left">
 		
 		<?php woo_loop_before(); ?>
 
