@@ -17,7 +17,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 	global $woo_options;
 ?>
        
-    <div id="content" class="page col-full">
+    <div id="content" class="page col-full mc-team-page">
     
     	<?php woo_main_before(); ?>
     	
@@ -51,7 +51,16 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
             <?php } ?>  
         
 		</section><!-- /#main -->
-		
+        <div class="mc-contact-full-stripe">
+            <div class="callout-bar">
+                <h2>OUR TEAM</h2>
+            </div>
+        </div>
+        <div class="mc-team-lower-wrap">
+            <div class="team-spirit">
+              <?php echo do_shortcode("[team_manager category='0' orderby='menu_order' limit='0' exclude='' layout='list' image_layout='boxed' image_size='shop_single']"); ?>
+            </div>
+        </div>
 		<?php //woo_main_after(); ?>
 		
     </div><!-- /#content -->

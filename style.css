@@ -1255,6 +1255,82 @@ article.page h1 {
 .mc-service-pix img {
     margin-top: 53px;
 }
+
+/* Team */
+
+.mc-team-wrap {
+    clear: both;
+    max-width: 905px;
+    min-height: 270px;
+    margin: 0 auto;
+    padding: 10px 25px 0px 25px;
+}
+.mc-team-lower-wrap {
+    max-width: 950px;
+    min-height: 590px;
+    margin: 0 auto;
+    padding: 50px 0 0 0;
+}
+.mc-team-page header {
+    max-width: 955px;
+    margin: 0 auto;
+    margin-top: 122px;
+    padding-left: 25px;
+}
+.partner-holder {
+    float: left;
+    width: 110px;
+    height: 55px;
+    background: #F1F1F1;
+    margin: 17px 14px 17px 14px;
+}
+.mc-co-tout {
+    float: left;
+    width: 58.7%;
+    margin-bottom: 0px;
+}
+.mc-partner-tout {
+    float: left;
+    width: 33%;
+    padding-left: 37px;
+    margin-bottom: 0px;
+}
+.mc-co-tout h2 {
+    font-family: "Open Sans",sans-serif;
+    font-size: 18px;
+}
+.mc-partner-tout h2 {
+    font-family: "Open Sans",sans-serif;
+    font-size: 18px;
+    padding-left: 17px;
+}
+.team-spirit {
+    margin-top: 25px;
+}
+h2.team-title {
+    font-family: "Open Sans",sans-serif;
+    font-size: 18px;
+    padding-top: 12px;
+}
+h4.team-position {
+    font-family: "Open Sans Light",sans-serif;
+    font-style: italic;
+    font-size: 14px;
+}
+.team-member-info {
+    padding-right: 15px;
+}
+.team-member-des p {
+    font-family: "Open Sans Light",sans-serif;
+    font-size: 14px;
+}
+ul.team-list>li.list {
+    border: none!important;
+}
+ul.team-list>li.list {
+    margin-top: 45px;
+    width: 50%!important;
+}
 /* Contact */
 .mc-page {
     float: left;
