@@ -136,6 +136,10 @@ h1.page-title {
 }
 
 /*shortcuts*/
+
+aside#sidebar {
+    display: none;
+}
 #tester {
 	width:100%;
 	background:#000;
@@ -454,6 +458,10 @@ ul.nav li {
 	background-image: -o-linear-gradient(top, #e1e1e1, #f5f5f5);
 	/* Opera 11.10+ */
 	background-image: linear-gradient(to bottom, #e1e1e1, #f5f5f5);
+}
+ul#main-nav .menu-item-38 a , ul#main-nav .menu-item-36 a , ul#main-nav .menu-item-35 a  {
+    padding-top: 22px!important;
+    min-height: 22px !important;
 }
 #wrapper #header #navigation ul.nav > li a:hover {
 	color:#fff;
@@ -1185,8 +1193,8 @@ ul.tabs {
     float: left!important;
     width: 185px!important;
     height: 45px;
-}
-/* #wrapper .single_add_to_cart_button, #wrapper .checkout-button, #wrapper #place_order {
+}*/
+ .mc-single-btn .single_add_to_cart_button, #wrapper .checkout-button, #wrapper #place_order {
     float: left;
     color: #ffffff;
     text-align: center;
@@ -1195,7 +1203,7 @@ ul.tabs {
     height: 33px;
     background: url("i/details-btn.png")no-repeat;
     opacity: 1;
-}*/
+}
 #wrapper .single_add_to_cart_button:hover, #wrapper .checkout-button:hover, #wrapper #place_order:hover {
     opacity: .9;
 }
@@ -1468,7 +1476,10 @@ div.mc-products-wrap ul.products li.product {
     margin: 0 auto;
 }
 
-
+/*article.page {
+    max-width: 970px;
+    margin:0 auto;
+}*/
 
 
 
@@ -1738,7 +1749,7 @@ body #wpbs__cont .widgettitle {
     nav ul {
         width: 71%;
     }
-    #menu-item-35 a {
+    ul#main-nav .menu-item-35 a {
         padding-top: 15px!important;
     }
 }
@@ -1822,6 +1833,9 @@ body #wpbs__cont .widgettitle {
     .mc-map-wrap {
         width: 90%;
         padding-left: 5%;
+    }
+    #main.col-left {
+        margin-top: 100px!important;
     }
 }
     @media screen and (max-width: 640px) {   /* mc-phone */
