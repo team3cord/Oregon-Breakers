@@ -714,7 +714,8 @@ body.woocommerce, body.home, body.page {
     margin: 0;
 }
 .obi-search-wrap {
-    width: 58%;
+    width: 805px;
+
     min-height: 100px;
     margin: 0 auto;
 }
@@ -951,7 +952,7 @@ mark.count {
 	background-image: linear-gradient(to bottom, #e1e1e1, #f5f5f5);
 }
 #obi-home-pearl-contain {
-	width:45%;
+	width:600px;
 	margin:0 auto;
 }
 #obi-home-pearl img {
@@ -1698,3 +1699,136 @@ body #wpbs__cont .widgettitle {
     height:90px;
 }
 
+/* Queries to Media */
+@media screen and (max-width: 980px) {
+    #header #logo {
+        width: 250px;
+        margin-top: -77px;
+    }
+    .products-left {
+        width: 100%;
+    }
+    .mc-obi-homecat-wrap-left {
+        float: left;
+        width: 100%;
+    }
+    .mc-comm-products {
+        display: block;
+        float: none;
+        margin: 0 auto;
+    }
+    .products-right {
+        width: 100%;
+    }
+    .mc-obi-homecat-wrap-right {
+        float: left;
+        width: 100%;
+    }
+    .mc-res-products {
+        display: block;
+        float: none;
+        margin: 0 auto;
+    }
+
+
+
+
+}
+@media screen and (max-width: 960px) {   /* mc-ipad */
+    nav ul {
+        width: 71%;
+    }
+    #menu-item-35 a {
+        padding-top: 15px!important;
+    }
+}
+@media screen and (max-width: 810px) {
+    #header #logo {
+        width: 230px;
+        margin-top: -69px;
+    }
+    nav ul {
+        width: 75%;
+    }
+}
+@media screen and (max-width: 810px) {
+    #header #logo {
+       float: left;
+        margin: -107px 0 0 50px;
+    }
+    .mc-homepage-banner {
+        display: none;
+    }
+    nav ul {
+        width: 100%;
+    }
+    #obi-search-bar {
+        margin-top: 57px;
+    }
+    .full-stripe{
+        width: 100%;
+        top:140px
+    }
+    #wrapper #header #navigation {
+        margin-top: 68px;
+    }
+    nav select {
+        color: #616161;
+        width: 268px;
+        padding: 5px;
+        font-family: "Open Sans Light","Open Sans", sans-serif;
+        font-style: italic;
+        font-size: 16px;
+        line-height: 1;
+        border: 0;
+        border-radius: 0;
+        height: 34px;
+        -webkit-appearance: none;
+
+    }
+    .obi-search-wrap {
+        width: 250px;
+        marign: 0 auto;
+    }
+    .mc-search-for {
+        margin: 0;
+    }
+    .mc-search-for label {
+        padding-left: 83px;
+    }
+    .mc-or {
+        padding-left: 100px ;
+        margin: 0;
+    }
+    .overpower-selectbox {
+        margin: 0;
+    }
+    .mc-go {
+        margin: 20px 25px 20px 37%;
+    }
+    #obi-home-pearl-contain {
+        width: 100%;
+    }
+    #obi-home-pearl img {
+        width: 25%;
+        padding: 0 0 15px 20px;
+    }
+    #obi-home-brands img {
+        width: 98%;
+    }
+    .footer-contact-left , .footer-contact-right {
+        width: 100%;
+    }
+    .mc-map-wrap {
+        width: 90%;
+        padding-left: 5%;
+    }
+}
+    @media screen and (max-width: 640px) {   /* mc-phone */
+    .full-stripe {
+        display: none;
+    }
+    #wrapper #header #navigation {
+        margin-top: 95px;
+    }
+}
