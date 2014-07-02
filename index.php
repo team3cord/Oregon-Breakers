@@ -19,8 +19,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 ?>
 
 
-
-            <div class="mc-homepage-banner">
+<div class="mc-homepage-banner" xmlns="http://www.w3.org/1999/html">
                 <div class="mc-wrap">
                  <div class="mc-banner-content">
                     <h1><?php  echo get_field('home_banner_title', 8); ?></h1>
@@ -81,7 +80,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
     <div class="products-left">
         <div class="obi-homecat teal1 desktop">
             <div class="mc-obi-homecat-wrap-left">
-               <a href="<?php echo get_site_url(); ?>/product-category/commercial/"><h3 class="mc-comercial">Commercial/Industrial</h3></a>
+               <a href="<?php echo get_site_url(); ?>/product-category/commercial-industrial"><h3 class="mc-comercial">Commercial/Industrial</h3></a>
             </div>
         </div>
         <div class="mc-comm-products mc-products">
@@ -94,7 +93,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
     <div class="products-right">
         <div class="obi-homecat teal2 desktop">
             <div class="mc-obi-homecat-wrap-right">
-                <a href="<?php echo get_site_url(); ?>/product-category/residential/"><h3 class="mc-comercial">Residential</h3></a>
+                <a href="<?php echo get_site_url(); ?>/product-category/residential"><h3 class="mc-comercial">Residential</h3></a>
             </div>
         </div>
         <div class="mc-res-products mc-products">
@@ -168,9 +167,10 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
     <div id="obi-home-pearl-contain">
     <img src="http://raredimension.com/clients/oregonbreakers/i/pearl-logo.png"/>
     <div class="obi-home-pearl-text">
-    <h2>Recognized by Pearl</h2>
-    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-    <span>Maecenas ut hendrerit est. Maecenas ut hendrerit est.</span><br>
+
+    <h2><?php echo get_field('pearl_header',8); ?></h2>
+
+    <span><?php echo get_field('pearl_text',8);?></span></br>
 	<a href="http://pearl1.org">Pearl1.org</a>
     </div>
     <div class="clr"></div>

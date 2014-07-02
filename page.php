@@ -23,6 +23,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
     	<?php woo_main_before(); ?>
     	
 		<section id="main" class="col-left">
+            <div class="mc-page-wrap">
 
         <?php
         	if ( have_posts() ) { $count = 0;
@@ -57,7 +58,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
             	<p><?php _e( 'Sorry, no posts matched your criteria.', 'woothemes' ); ?></p>
             </article><!-- /.post -->
         <?php } // End IF Statement ?>  
-        
+        </div>
 		</section><!-- /#main -->
 		
 		<?php woo_main_after(); ?>

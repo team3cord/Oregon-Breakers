@@ -34,10 +34,26 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 					</header>
                     
                     <section class="entry">
-	                	<?php the_content(); ?>
+
+
+                        <div class="mc-team-wrap">
+                            <div class="col-60 mc-co-tout">
+                                <h2><?php echo get_field('team_subhead'); ?></h2>
+                                <p class="mc-lite"><?php echo get_field('team_copy'); ?></p>
+                            </div>
+                            <div class="col-40 mc-partner-tout">
+                                <h2><?php echo get_field('team_partners'); ?></h2>
+                                <div class="partner-holder"><img src="<?php echo get_field('partner_image1'); ?>"></div>
+                                <div class="partner-holder"><img src="<?php echo get_field('partner_image2'); ?>"></div>
+                                <div class="partner-holder"><img src="<?php echo get_field('partner_image3'); ?>"></div>
+                                <div class="partner-holder"><img src="<?php echo get_field('partner_image4'); ?>"></div>
+                            </div>
+                            <div class="clr"> </div>
+                        </div><!-- mc service wrap -->
+                        <p>&nbsp;</p>
+
 	               	</section><!-- /.entry -->
 
-					<?php edit_post_link( __( '{ Edit }', 'woothemes' ), '<span class="small">', '</span>' ); ?>
 
                 </article><!-- /.post -->
                                                     
@@ -45,9 +61,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 					} // End WHILE Loop
 				} else {
 			?>
-				<article <?php post_class(); ?>>
-                	<p><?php _e( 'Sorry, no posts matched your criteria.', 'woothemes' ); ?></p>
-                </article><!-- /.post -->
+
             <?php } ?>  
         
 		</section><!-- /#main -->
