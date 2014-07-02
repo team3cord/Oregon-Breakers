@@ -18,33 +18,22 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 	
 ?>
 
-    <?php if ( $woo_options[ 'woo_homepage_banner' ] == "true" ) { ?>
+
+
+            <div class="mc-homepage-banner">
+                <div class="mc-wrap">
+                 <div class="mc-banner-content">
+                    <h1><?php  echo get_field('home_banner_title', 8); ?></h1>
+                    <p class="mc-banner-description"><?php echo get_field('home_banner_description',8); ?></p>
+                    <a class="mc-banner-tel" href="tel:<?php echo get_field('home_banner_phone', 8); ?>"><img src="<?php get_site_url(); ?>wp-content/themes/or-breakers/i/phone-icn.png" class="phone-icon"><?php echo get_field('home_banner_phone', 8); ?></a><br>
+                    <a class="experts-btn" href="<?php echo get_site_url(); ?>/meet-the-experts">MEET THE EXPERTS</a>
+                 </div>
+               </div>
+    	</div>
     	
-    	<a href="/meet-the-experts"><div class="mc-homepage-banner">
-        
-    		<?php
-				if ( $woo_options[ 'woo_homepage_banner' ] == "true" ) { $banner = $woo_options['woo_homepage_banner_path']; }
-				if ( $woo_options[ 'woo_homepage_banner' ] == "true" && is_ssl() ) { $banner = preg_replace("/^http:/", "https:", $woo_options['woo_homepage_banner_path']); }
-			?>
-			<img src="<?php echo $banner; ?>" alt="" />
-    		<!--<h1><span><?//php echo $woo_options['woo_homepage_banner_headline']; ?></span></h1>
-    		<div class="description"><?//php echo wpautop($woo_options['woo_homepage_banner_standfirst']); ?></div> -->
-            
-            <!-- <div id="obi-slider-info">
-            <div class="obi-slider-text">
-            <h1>Your NW Electrical Experts</h1>
-            <p>We serve the Portland area with our vast knowledge of all things breakers and electrical. If you can’t find what you’re looking for here, give us a call and we’ll get you the exact part you need.</p>
-            <h2>(503) 736-0921</h2> 
-            </div>
-            <a href="/meet-the-experts" class="obi-button">Meet The Experts</a>
-            </div> -->
-               
-    	</div></a> 
-    	
-    <?php } ?>
-    
+
 <!--SEARCH BAR-->  
-<div id="obi-search-bar"> 
+<div id="obi-search-bar mc-index">
 <script>
   function avalcm_search_link(vas){
     var link1=document.getElementById("home_url").value;
@@ -92,7 +81,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
     <div class="products-left">
         <div class="obi-homecat teal1 desktop">
             <div class="mc-obi-homecat-wrap-left">
-               <h3 class="mc-comercial">Commercial/Industrial</h3>
+               <a href="<?php echo get_site_url(); ?>/product-category/commercial/"><h3 class="mc-comercial">Commercial/Industrial</h3></a>
             </div>
         </div>
         <div class="mc-comm-products mc-products">
@@ -105,7 +94,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
     <div class="products-right">
         <div class="obi-homecat teal2 desktop">
             <div class="mc-obi-homecat-wrap-right">
-                <h3 class="mc-comercial">Residential</h3>
+                <a href="<?php echo get_site_url(); ?>/product-category/residential/"><h3 class="mc-comercial">Residential</h3></a>
             </div>
         </div>
         <div class="mc-res-products mc-products">

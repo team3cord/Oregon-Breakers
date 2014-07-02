@@ -39,7 +39,7 @@ global $woo_options, $woocommerce;
 
 
 	<div id="top">
-    
+        <div class="mc-mobile-logo"><a href="<?php echo get_site_url(); ?>"></a></div>
     <div id="top-help">
 		<em>Need some help?</em> Call us: <span class="fbold">(503) 736-0921</span>
         <span class="fsmall"><br/>Toll free: (800) 943-3323&nbsp</span>
@@ -48,7 +48,7 @@ global $woo_options, $woocommerce;
     <div id="top-shop">
     <?php
 				if ( class_exists( 'woocommerce' ) ) {
-					echo '<ul class="nav wc-nav">';
+					echo '<ul class=" wc-nav">';
 					woocommerce_cart_link();
 					echo '<li class="checkout"><a href="'.esc_url($woocommerce->cart->get_checkout_url()).'">'.__('Checkout','woothemes').'</a></li>';
 					echo '</ul>';
@@ -63,7 +63,7 @@ global $woo_options, $woocommerce;
     <?php woo_header_before(); ?>
     <div class="full-stripe">
     </div>
-	<header id="header" class="mc-header-full col-full">
+	<header id="header" class="mc-header-full">
         <div class="mc-header-wrap">
 
 <div id="mobile-clear"></div>
@@ -77,7 +77,7 @@ global $woo_options, $woocommerce;
 			?>
 			<?php if ( ! isset( $woo_options['woo_texttitle'] ) || $woo_options['woo_texttitle'] != 'true' ) { ?>
 			    <a id="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr( get_bloginfo( 'description' ) ); ?>">
-			    	<img src="<?php echo $logo; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
+			    	<img src="<?php echo get_site_url(); ?>/wp-content/themes/or-breakers/i/mc-logo.png" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
 			    </a>
 		    <?php } ?>
 
