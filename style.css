@@ -411,7 +411,6 @@ ul.nav li {
 #main-nav .sub-menu li {
     width: 120px;
     padding: 0;
-    background: #00ff00;
 }
 #main-nav .sub-menu li a {
     border-right: none!important;
@@ -479,17 +478,18 @@ ul.nav li {
 	font-family:opensans-regular;
     font-size: 13px;
     line-height: 1.2em;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#e1e1e1), to(#f5f5f5));
+    background: url("i/menu-stripe.png");
+	/*background-image: -webkit-gradient(linear, left top, left bottom, from(#e1e1e1), to(#f5f5f5));
 	/* Saf4+, Chrome */
-	background-image: -webkit-linear-gradient(top, #e1e1e1, #f5f5f5);
+	/*background-image: -webkit-linear-gradient(top, #e1e1e1, #f5f5f5);
 	/* Chrome 10+, Saf5.1+, iOS 5+ */
-	background-image: -moz-linear-gradient(top, #e1e1e1, #f5f5f5);
+	/*background-image: -moz-linear-gradient(top, #e1e1e1, #f5f5f5);
 	/* FF3.6+ */
-	background-image: -ms-linear-gradient(top, #e1e1e1, #f5f5f5);
+	/*background-image: -ms-linear-gradient(top, #e1e1e1, #f5f5f5);
 	/* IE10 */
-	background-image: -o-linear-gradient(top, #e1e1e1, #f5f5f5);
+	/*background-image: -o-linear-gradient(top, #e1e1e1, #f5f5f5);
 	/* Opera 11.10+ */
-	background-image: linear-gradient(to bottom, #e1e1e1, #f5f5f5);
+	/*background-image: linear-gradient(to bottom, #e1e1e1, #f5f5f5);*/
 }
 ul#main-nav .menu-item-38 a , ul#main-nav .menu-item-36 a , ul#main-nav .menu-item-35 a  {
     padding-top: 22px!important;
@@ -794,8 +794,8 @@ body.woocommerce, body.home, body.page {
 	/* Opera 11.10+ */
 	background-image: linear-gradient(to bottom, #e1e1e1, #f5f5f5);
 }
-#obi-search-bar form {
-    margin: 0;
+#searchform_special {
+    margin: 0!important;
 }
 .obi-search-wrap {
     width: 805px;
