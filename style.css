@@ -333,12 +333,26 @@ nav li {
 #top-help {
 	float: right;
     width: 29%;
+    padding: 9px 9px 0 9px;
     height: 55px;
+    font-family: "Open Sans Light","Open Sans",sans-serif;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 19px;
+}
+#top-help .fbold {
+    font-family: "Open Sans",sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
 }
 #top-shop {/* TODO SHOP Header? */
 	float:right;
     width: 29%;
     height: 55px;
+    font-family: "Open Sans Light","Open Sans",sans-serif;
+    font-size: 14px!important;
+    padding: 9px 9px 0 0;
 
 }
 
@@ -413,7 +427,6 @@ ul.nav li {
 	padding: 0;
 	box-shadow: none;
 	-webkit-box-shadow: none;
-	background: #fff;
 	}
 #wrapper #header #navigation ul.nav > li.current-menu-item > a, #header #navigation ul.nav > li.current_page_item > a, .sub-menu a {
 	color:#000;
@@ -1938,6 +1951,9 @@ body #wpbs__cont .widgettitle {
         width: 50%;
         padding-left: 15px;
     }
+    #top-help {
+        width: 32%;
+    }
 
 }
 @media  screen and (max-width: 934px) {
@@ -1960,6 +1976,9 @@ body #wpbs__cont .widgettitle {
     .full-stripe {
         display: none;
     }
+    #top ul.wc-nav {
+        float: left!important;
+    }
     .mc-homepage-banner {
         display: none;
     }
@@ -1980,10 +1999,10 @@ body #wpbs__cont .widgettitle {
     }
     #top-shop {
         float: left;
-        width: 35%;
+        width: 45%;
     }
     #top-help {
-        width: 35%;
+        width: 45%;
     }
     #obi-search-bar {
         margin-top: 57px;
@@ -2147,7 +2166,7 @@ body #wpbs__cont .widgettitle {
         margin-top: 38px;
     }
     #top-help {
-        width: 50%;
+        width: 70%;
         float: none;
         margin: 0 auto;
         padding: 10px;
@@ -2160,6 +2179,10 @@ body #wpbs__cont .widgettitle {
         padding: 10px;
         text-align: center;
     }
+    #top-shop ul.wc-nav {
+        float: none!important;
+    }
+
         div.coupon input[type="text"] {
             width: 60%!important;
             float: left!important;
@@ -2197,4 +2220,9 @@ body #wpbs__cont .widgettitle {
             margin-left: 11.5%!important;
             margin-right: 12.5%!important;
         }
+}
+@media screen and (max-width: 450px) {
+    #top-shop {
+        width: 70%;
+    }
 }
