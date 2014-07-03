@@ -26,9 +26,8 @@ global $woo_options;
 
             <div class="mc-service-wrap">
                 <div class="col-60 mc-service-tout mc-lite">
-                   <?php echo get_field('testing_tout');?>
+                    <?php echo get_field('testing_tout');?>
                 </div>
-
                 <div class="col-40 mc-service-pearl">
                     <img src="http://raredimension.com/clients/oregonbreakers/i/pearl-logo.png" alt="" /><div class="mc-service-pearl-text">
                         <h2><?php echo get_field('testing_pearl_header');?></h2>
@@ -36,32 +35,39 @@ global $woo_options;
                         <a href="http://pearl1.org">Pearl1.org</a>
                     </div>
                 </div>
-                <div class="clr"> </div><br />
-                <div class="col-60 mc-service-circuit mc-lite">
-                    <h2>Circuit Breaker Testing</h2>
-                    <p class="mc-lite">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut hendrerit est. Donec volutpat id justo id lobortis. Nullam dignissim sit amet tortor eu gravida. Duis a mauris in neque semper lobortis nec suscipit massa.</p>
-                    <span class="mc-bold-italic">What is Acceptance Testing?</span>
-                    <p class="mc-lite">Etiam pellentesque interdum sodales. Aenean non egestas arcu. Praesent in eros sit amet massa suscipit porta id non purus. Vestibulum sit amet mauris nec enim euismod euismod.</p>
-                    <span class="mc-bold-italic">The Purpose of Ground Fault Protection</span>
-                    <p class="mc-lite">Phasellus eu metus sagittis, ornare odio ut, lacinia tellus. Etiam commodo convallis orci, ut tempus est hendrerit eget. Donec mattis leo vel sapien eleifend, id dictum arcu pretium.</p>
 
-                    </div>
-                <div class="col-40 mc-service-pix">
-                    <img class="alignnone size-full wp-image-126" src="http://ob.crosshatchcreative.com/wp-content/uploads/2014/04/services1.jpg" alt="services1" width="349" height="260" />
-                    <span class="mc-service-lite-italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut hendrerit est. Donec volutpat id justo id lobortis.</span>
-                </div>
-                <div class="col-60 mc-service-circuit mc-lite">
-                    <h2 class="ground-fault">Ground Fault Testing</h2>
-                    <p class="mc-lite">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut hendrerit est. Donec volutpat id justo id lobortis. Nullam dignissim sit amet tortor eu gravida. Duis a mauris in neque semper lobortis nec suscipit massa.</p>
-                    <span class="mc-bold-italic">What is Acceptance Testing?</span>
-                    <p class="mc-lite">Etiam pellentesque interdum sodales. Aenean non egestas arcu. Praesent in eros sit amet massa suscipit porta id non purus. Vestibulum sit amet mauris nec enim euismod euismod.</p>
-                    <span class="mc-bold-italic">The Purpose of Ground Fault Protection</span>
-                    <p class="mc-lite">Phasellus eu metus sagittis, ornare odio ut, lacinia tellus. Etiam commodo convallis orci, ut tempus est hendrerit eget. Donec mattis leo vel sapien eleifend, id dictum arcu pretium.</p>
-                </div>
-                <div class="col-40 mc-service-pix">
-                    <img class="alignnone size-full wp-image-127" src="http://ob.crosshatchcreative.com/wp-content/uploads/2014/04/services2.jpg" alt="services2" width="349" height="260" />
-                    <span class="mc-service-lite-italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut hendrerit est. Donec volutpat id justo id lobortis.</span>
-                </div>
+
+                <?php
+
+                // check if the repeater field has rows of data
+                if( have_rows('main_repeater') ):
+
+                    // loop through the rows of data
+                    while ( have_rows('main_repeater') ) : the_row();
+
+                        // display a sub field value
+                        ?>
+                        <div class="clr"> </div><br />
+                        <div class="col-60 mc-service-circuit mc-lite">
+                            <?php the_sub_field('left_content'); ?>
+                        </div>
+                        <div class="col-40 mc-service-pix">
+                            <?php the_sub_field('right_content'); ?>
+                        </div>
+                    <?php
+
+                    endwhile;
+
+                else :
+
+                    // no rows found
+
+                endif;
+
+                ?>
+
+
+
             </div><!-- mc page wrap -->
 
             <p>&nbsp;</p>

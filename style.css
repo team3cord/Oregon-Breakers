@@ -1522,7 +1522,7 @@ p.stock {
 }
 
 .interrupt_rating_table tbody tr th {
-    background-color: #e3e3e3;
+    background: url("i/menu-stripe.png") #e3e3e3;
     text-align: center;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -1601,6 +1601,9 @@ article.page h1 {
 }
 .mc-service-pix img {
     margin-top: 53px;
+}
+.mc-service-pix span {
+    font-size: 12px;
 }
 /* Product */
 .mc-search-discription {
