@@ -18,7 +18,36 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 	get_header();
 	global $woo_options;
 ?>
-       
+<?php if (is_page(5)) {
+
+   echo' <div class="sin-prod">
+        <div class="sub-wrap">
+            <ul>
+                <li class="sub-active">FIND YOUR PART</li>
+                <li>CHECKOUT</li>
+                <li>CONFIRM ORDER</li>
+            </ul>
+        </div>
+        <div class="sub-right-stripe"></div>
+    </div>' ;
+}
+?>
+<?php if (is_page(6)) {
+
+    echo' <div class="sin-prod">
+        <div class="sub-wrap">
+            <ul>
+                <li>FIND YOUR PART</li>
+                <li class="sub-active">CHECKOUT</li>
+                <li>CONFIRM ORDER</li>
+            </ul>
+        </div>
+        <div class="sub-right-stripe"></div>
+    </div>' ;
+}
+?>
+
+
     <div id="content mc-page" class="page col-full">
     	<?php woo_main_before(); ?>
     	

@@ -12,7 +12,16 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 get_header( 'shop' ); ?>
-<div class="sin-prod"></div>
+<div class="sin-prod">
+    <div class="sub-wrap">
+    <ul>
+        <li class="sub-active">FIND YOUR PART</li>
+        <li>CHECKOUT</li>
+        <li>CONFIRM ORDER</li>
+    </ul>
+    </div>
+    <div class="sub-right-stripe"></div>
+</div>
 	<?php
 		/**
 		 * woocommerce_before_main_content hook
