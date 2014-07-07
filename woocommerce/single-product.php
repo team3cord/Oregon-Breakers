@@ -12,7 +12,7 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 get_header( 'shop' ); ?>
-<div class="sin-prod">
+<div class="sin-prod single-prod">
     <div class="sub-wrap">
     <ul>
         <li class="sub-active">FIND YOUR PART</li>

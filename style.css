@@ -2078,15 +2078,23 @@ body #wpbs__cont .widgettitle {
         width: 100%;
     }
     .sub-right-stripe {
-        top: 276px;
+        top: 285px;
         width: 30%;
     }
     .sin-prod {
         width: 80%;
         margin: 0 auto;
     }
+    .single-prod ul {
+        margin-top: -12px!important;
+    }
     .sin-prod ul {
-        margin-top: -12px;
+        margin-top: -112px;
+    }
+}
+@media screen and (max-width: 795px) {
+    .woocommerce-tabs ul.tabs li {
+        width: 33%;
     }
 }
 @media screen and (max-width: 750px) {
@@ -2154,8 +2162,13 @@ body #wpbs__cont .widgettitle {
     .sin-prod li:before {
         display: none!important;
     }
+    div.mc-products-wrap ul.products li.product {
+        width: 45%;
+        min-height: 500px;
+    }
 }
-    @media screen and (max-width: 640px) {   /* mc-phone */
+
+@media screen and (max-width: 640px) {   /* mc-phone */
     .full-stripe {
         display: none;
     }
@@ -2165,6 +2178,7 @@ body #wpbs__cont .widgettitle {
     .products-right {
         min-height: 1px;
     }
+
     #wrapper #header #navigation {
         margin-top: 38px;
     }
@@ -2186,44 +2200,93 @@ body #wpbs__cont .widgettitle {
         float: none!important;
     }
 
-        div.coupon input[type="text"] {
-            width: 60%!important;
-            float: left!important;
-            margin-left: 20%%;
-            margin-right: 20%;
-        }
-        div.coupon input[type="submit"] {
-            width: 60%!important;
-            float: left!important;
-            margin-left: 20%%;
-            margin-right: 20%;
-        }
-        div.woocommerce input[value="Update Cart"] {
-            width: 60%!important;
-            float: left!important;
-            margin-left: 20%!important;
-            margin-right: 20%!important;
-        }
-        #wrapper .shop_attributes tbody tr {
-        }
-        div.woocommerce input[value="Proceed to Checkout"] {
-            width: 60%!important;
-            background: #ff7725!important;
-            float: left!important;
-            margin-left: 20%!important;
-            margin-right: 20%!important;
-        }
-        div.place-order input[value="Place order"] {
-            width: 60%!important;
-            padding-top: 0px!important;
-            padding-bottom: 5px;
-            height: 40px!important;
-            background: #ff7725!important;
-            float: left!important;
-            margin-left: 11.5%!important;
-            margin-right: 12.5%!important;
-        }
+    div.coupon input[type="text"] {
+        width: 60%!important;
+        float: left!important;
+        margin-left: 20%%;
+        margin-right: 20%;
+    }
+    div.coupon input[type="submit"] {
+        width: 60%!important;
+        float: left!important;
+        margin-left: 20%%;
+        margin-right: 20%;
+    }
+    div.woocommerce input[value="Update Cart"] {
+         width: 60%!important;
+         float: left!important;
+         margin-left: 20%!important;
+         margin-right: 20%!important;
+    }
+    div.woocommerce input[value="Proceed to Checkout"] {
+         width: 60%!important;
+         background: #ff7725!important;
+         float: left!important;
+         margin-left: 20%!important;
+         margin-right: 20%!important;
+    }
+    div.place-order input[value="Place order"] {
+         width: 60%!important;
+         padding-top: 0px!important;
+         padding-bottom: 5px;
+         height: 40px!important;
+         background: #ff7725!important;
+         float: left!important;
+         margin-left: 11.5%!important;
+         margin-right: 12.5%!important;
+    }
+    div.mc-single-wrap div.images img {
+         width: 100%;
+    }
+    .mc-summary{
+         width: 100%;
+    }
+    .mc-get-form form {
+         width: 100%;
+         margin-bottom: 125px;
+    }
+    .mc-tab-line {
+        display: none;
+    }
+    ul.tabs {
+        width: 100%;
+    }
+    .woocommerce-tabs ul.tabs li {
+        width: 100%;
+        float: left;
+    }
+    .woocommerce-tabs ul.tabs li:nth-child(2n) {
+        margin-left: 0;
+        marign-top:0px;
+        float: none;
+    }
+    .custom_tab_2_tab {
+        margin-top: 0px!important;
+    }
+    .product-detail-right {
+        width: 100%;
+    }
+    .product-detail-left {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    div.mc-products-wrap ul.products li.product {
+       width: 85%;
+         min-height: 500px;
+    }
+    .mc-service-tout {
+        width: 100%;
+    }
+    .mc-service-pearl {
+        width: 100%;
+    }
+    div.team-spirit >ul.team-list>li.list {
+        width: 85%!important;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 }
+
 @media screen and (max-width: 450px) {
     #top-shop {
         width: 70%;
