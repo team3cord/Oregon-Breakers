@@ -25,7 +25,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
             <ul>
                 <li class="sub-active">FIND YOUR PART</li>
                 <li>CHECKOUT</li>
-                <li>CONFIRM ORDER</li>
+                <li>ORDER CONFIRMATION</li>
             </ul>
         </div>
         <div class="sub-right-stripe"></div>
@@ -38,8 +38,8 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
         <div class="sub-wrap">
             <ul>
                 <li>FIND YOUR PART</li>
-                <li class="sub-active">CHECKOUT</li>
-                <li>CONFIRM ORDER</li>
+                <li class="sub-active mc-checkout">CHECKOUT</li>
+                <li class="mc-confirm">ORDER CONFIRMATION</li>
             </ul>
         </div>
         <div class="sub-right-stripe"></div>
@@ -95,5 +95,14 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
         <?php get_sidebar(); ?>
 
     </div><!-- /#content -->
-		
+	<script>
+        jQuery(document).ready(function(){
+            if (window.location.href.indexOf('order-received') > -1 ) {
+                jQuery('li.mc-checkout').removeClass('sub-active');
+                jQuery('li.mc-confirm').addClass('sub-active');
+
+            }
+        });
+
+	</script>
 <?php get_footer(); ?>

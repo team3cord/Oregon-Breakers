@@ -21,12 +21,13 @@ global $woo_options;
         <?php woo_main_before(); ?>
 
         <section id="main" class="fullwidth">
+            <header>
+                 <h1><?php the_title(); ?></h1>
+             </header>
 
             <div class="mc-page-wrap">
 
-             <header>
-                 <h1><?php the_title(); ?></h1>
-             </header>
+
                 <div class="col-50 mc-contact-page">
                     <div id="obi-contact">
                         <span class="mc-lite"><?php echo get_field('contact_instructions'); ?></span><br /> <br /><br />

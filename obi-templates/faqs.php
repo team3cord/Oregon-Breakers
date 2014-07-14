@@ -20,16 +20,18 @@ global $woo_options;
         <?php woo_main_before(); ?>
 
         <section id="main" class="fullwidth">
+            <header>
+                  <h1><?php the_title(); ?></h1>
+            </header>
             <div class="mc-service-wrap">
             <?php
             if ( have_posts() ) { $count = 0;
                 while ( have_posts() ) { the_post(); $count++;
                     ?>
+
                     <article <?php post_class(); ?>>
 
-                        <header>
-                            <h1><?php the_title(); ?></h1>
-                        </header>
+
 
 
                         <section class="entry">

@@ -45,7 +45,7 @@ get_header( 'shop' ); ?>
                 <div class="callout-bar product-bar">
                     <span class="products-large"> <?php woocommerce_breadcrumb(); ?></span>
                 </div>
-            </div>';
+            </div>
 
             <div class="mc-products-wrap">
 			<!-- <h1 class="mc-page-title"><?//php woocommerce_page_title(); ?></h1> -->
