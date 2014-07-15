@@ -689,6 +689,7 @@ background-image:url('i/tris-left.jpg');
 	list-style:none;
 }
 .another-pearl {
+    width: 95%;
     padding: 40px 0 0 20px;
 }
 .another-pearl img {
@@ -709,7 +710,7 @@ background-image:url('i/tris-left.jpg');
 .createdby {
     float: left;
     width: 100%;
-    padding: 35px 0 0px 15px;
+    padding: 35px 0 0 0;
     font-family: "Open Sans Light", "open sans", sans-serif;
     font-size: 12px;
 }
@@ -1007,7 +1008,7 @@ body.woocommerce, body.home, body.page {
 }
 .mc-comm-products {
    float: right;
-    width: 600px;
+    max-width: 600px;
 }
 .mc-res-products {
     float: left;
@@ -1395,6 +1396,7 @@ ul.tabs {
     float: left;
     color: #ffffff;
     text-align: center;
+    margin-top: 15px;
     padding-top: 4px;
     width: 90px;
     height: 33px;
@@ -1714,16 +1716,21 @@ div.mc-products-wrap ul.products li.product {
 .mc-discription {
     padding: 0px 10px 10px 10px ;
 }
+
 .ob_manufacturer {
     font-family: "Open Sans",sans-serif;
     font-size: 13px;
     font-weight: normal;
+    float: left;
+    width: 51%;
 }
 .ob_manufacturer_text {
     font-family: "Open Sans Light","Open Sans",sans-serif;
     font-size: 13px;
     font-weight: normal;
+    float: right;
 }
+
 .mc-single-btn {
     width: 90px;
     margin: 0 auto;
@@ -2034,6 +2041,9 @@ body #wpbs__cont .widgettitle {
     .mc-co-tout , .mc-partner-tout {
         width: 100%;
     }
+    .mc-partner-tout {
+    	padding-left: 0;
+    }
 
 }
 @media screen and (max-width: 840px) {
@@ -2133,7 +2143,7 @@ body #wpbs__cont .widgettitle {
         width: 98%;
     }
     .footer-contact-left , .footer-contact-right {
-        width: 100%;
+        width: 98%;
     }
     .mc-map-wrap {
         width: 90%;
@@ -2185,11 +2195,11 @@ body #wpbs__cont .widgettitle {
 @media screen and (max-width: 750px) {
     #obi-contact {
         width: 100%;
-        padding-left: 15%;
+        padding: 0;
     }
     .mc-hours {
         width: 100%;
-        padding-left: 15%;
+        padding: 0;
     }
     .mc-contact-img {
         width: 100%;
@@ -2234,6 +2244,9 @@ body #wpbs__cont .widgettitle {
     }
     .mc-service-tout , .mc-service-pearl {
         width: 100%;
+    }
+    #interrupt_rating {
+    	display: none;
     }
 }
 
@@ -2349,15 +2362,19 @@ body #wpbs__cont .widgettitle {
     .mc-service-pearl {
         width: 100%;
     }
+
     div.team-spirit >ul.team-list>li.list {
         width: 85%!important;
         padding-left: 5px;
         padding-right: 5px;
     }
+    .mc-service-circuit , .mc-service-pix {
+    	width: 98%;
+    }
 }
 
 @media screen and (max-width: 450px) {
     #top-shop {
-        width: 70%;
+        width: 95%;
     }
 }

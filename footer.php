@@ -68,13 +68,10 @@ Give the experts a call:</span> <span class="fbold">(503) 736-0921</span>
 
                  <!--Contact info-->
                 <div class="mc-contact-info">
-                <span class="mc-contact-italic">Located in inner SE Portland</span>
-                <span class="mc-lite"> 3365 SE 17th Avenue<br/>
-                Portland, OR 97292</span><br><br>
-                <span class="mc-lite">Open 7am – 4pm<br/>
-                Monday through Friday</span><br/>
-                <span class="mc-reg">(503) 736-0921<br/>
-                (800) 943-3323</span>
+                <span class="mc-contact-italic"><?php echo get_field('footer_located_in',8); ?></span>
+                <span class="mc-lite"><?php echo get_field('footer_address',8); ?></span><br><br>
+                <span class="mc-lite"><?php echo get_field('footer_hours',8); ?></span><br/>
+                <span class="mc-reg"><?php echo get_field('footer_phone_numbers',8); ?></span>
                 </div>
                  <!--Contact info END-->
                 <div class="createdby">
