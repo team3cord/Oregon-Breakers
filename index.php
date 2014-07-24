@@ -25,7 +25,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
                     <h1><?php  echo get_field('home_banner_title', 8); ?></h1>
                     <p class="mc-banner-description"><?php echo get_field('home_banner_description',8); ?></p>
                     <a class="mc-banner-tel" href="tel:<?php echo get_field('home_banner_phone', 8); ?>"><img src="<?php get_site_url(); ?>wp-content/themes/or-breakers/i/phone-icn.png" class="phone-icon"><?php echo get_field('home_banner_phone', 8); ?></a><br>
-                    <a class="experts-btn" href="<?php echo get_site_url(); ?>/meet-the-experts">MEET THE EXPERTS</a>
+                    <a class="experts-btn" href="<?php echo get_site_url(); ?>/meet-the-experts">ASK THE EXPERTS</a>
                  </div>
                </div>
     	</div>
