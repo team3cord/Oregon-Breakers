@@ -1305,13 +1305,13 @@ div.mc-single-wrap div.images img {
 .mc-get-form form .ob-table-spacer {
     color: #000000;
     font-family: "Open Sans",sans-serif;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: normal;
 }
 .mc-get-form form .ob-table-spacer .ob_price {
     color: #000000;
     font-family: "Open Sans",sans-serif;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
 }
 .wc-nav {
@@ -1517,7 +1517,7 @@ div.quantity .plus:hover, div.quantity .minus:hover {
     font-weight: bold;
     line-height: 4em;
     margin: 0;
-    padding: 0 15px;
+    padding: 0 13px;
     height: 75px;
 }
 p.stock {
@@ -2152,6 +2152,19 @@ body #wpbs__cont .widgettitle {
     #main.col-left {
         margin-top: 100px!important;
     }
+    div.mc-single-wrap div.images img {
+    	width: 50%;
+    	margin-left: 25%; 
+    }
+    .mc-summary {
+    	width:40%;
+    	margin-left: 10%;
+    	min-height: 400px;
+    }
+    .mc-get-form form {
+    	width: 40%;
+    	min-height: 400px;
+    }
     div.woocommerce .col2-set .col-1 {
         width: 100%;
     }
@@ -2319,9 +2332,11 @@ body #wpbs__cont .widgettitle {
     }
     div.mc-single-wrap div.images img {
          width: 100%;
+         margin-left: 0%;
     }
     .mc-summary{
          width: 100%;
+         margin-left: 0;
     }
     .mc-get-form form {
          width: 100%;
